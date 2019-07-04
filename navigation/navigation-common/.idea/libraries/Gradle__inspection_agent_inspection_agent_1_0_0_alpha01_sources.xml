@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: inspection-agent.inspection-agent-1.0.0-alpha01-sources">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../out/androidx/inspection/inspection-agent/build/libs/inspection-agent-1.0.0-alpha01-sources.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

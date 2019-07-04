@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: truth-java8-extension-0.42">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/com/google/truth/extensions/truth-java8-extension/0.42/truth-java8-extension-0.42.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

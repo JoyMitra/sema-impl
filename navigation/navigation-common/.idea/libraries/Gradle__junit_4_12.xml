@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: junit-4.12">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/junit/junit/4.12/junit-4.12.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/junit/junit/4.12/junit-4.12-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

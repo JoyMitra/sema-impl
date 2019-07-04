@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: remotecallback-processor.remotecallback-processor-1.0.0-alpha02">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../out/androidx/remotecallback-processor/build/libs/remotecallback-processor-1.0.0-alpha02.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

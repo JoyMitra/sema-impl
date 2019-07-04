@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: intellij-core-26.5.0-beta04">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/com/android/tools/external/com-intellij/intellij-core/26.5.0-beta04/intellij-core-26.5.0-beta04.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

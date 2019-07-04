@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: kotlinx-metadata-jvm-0.0.5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../prebuilts/androidx/external/org/jetbrains/kotlinx/kotlinx-metadata-jvm/0.0.5/kotlinx-metadata-jvm-0.0.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../../prebuilts/androidx/external/org/jetbrains/kotlinx/kotlinx-metadata-jvm/0.0.5/kotlinx-metadata-jvm-0.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

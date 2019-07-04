@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: com.squareup.okio:okio:1.14.0@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../prebuilts/androidx/external/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

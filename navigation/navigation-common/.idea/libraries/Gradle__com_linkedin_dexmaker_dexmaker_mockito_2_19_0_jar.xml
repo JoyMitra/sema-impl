@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.linkedin.dexmaker:dexmaker-mockito:2.19.0@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/com/linkedin/dexmaker/dexmaker-mockito/2.19.0/dexmaker-mockito-2.19.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/com/linkedin/dexmaker/dexmaker-mockito/2.19.0/dexmaker-mockito-2.19.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

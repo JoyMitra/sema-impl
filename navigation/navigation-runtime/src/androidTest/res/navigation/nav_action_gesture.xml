@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_action_gesture"
+    app:startDestination="@+id/start_test">
+
+    <test android:id="@+id/start_test">
+        <action
+            android:id="@+id/my_action"
+            app:destination="@+id/start_test">
+            <argument
+                android:name="test_action_arg"
+                android:defaultValue="123L" />
+            <gesture-constraint app:widgetId="@+id/start_test" app:gesture="click" />
+        </action>
+        <action
+            android:id="@+id/my_action1"
+            app:destination="@+id/start_test">
+            <gesture-constraint app:widgetId="@+id/start_test" app:gesture="click" />
+        </action>
+
+        <gesture-constraint app:widgetId="@+id/start_test" app:gesture="click" />
+    </test>
+
+</navigation>

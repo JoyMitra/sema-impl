@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: noto-emoji-compat.noto-emoji-compat-java">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../out/androidx/noto-emoji-compat/build/jarjar/noto-emoji-compat-java.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

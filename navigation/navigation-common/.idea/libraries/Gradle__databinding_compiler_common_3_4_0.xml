@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: databinding-compiler-common-3.4.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/androidx/databinding/databinding-compiler-common/3.4.0/databinding-compiler-common-3.4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: sunec">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.sdkman/candidates/java/8u152-zulu/jre/lib/ext/sunec.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

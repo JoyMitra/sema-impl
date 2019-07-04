@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: nullaway-0.3.7">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/com/uber/nullaway/nullaway/0.3.7/nullaway-0.3.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/com/uber/nullaway/nullaway/0.3.7/nullaway-0.3.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

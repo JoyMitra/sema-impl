@@ -1,0 +1,26 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    compileOnly build_libs.lint.core
+//    compileOnly build_libs.lint.api
+//    testCompile build_libs.lint.tests
+//    testCompile "junit:junit:4.12"
+    compileOnly "com.android.tools.lint:lint-api:26.2.0-rc02"
+    compileOnly "com.android.tools.lint:lint-checks:26.2.0-rc02"
+    testImplementation "junit:junit:4.12"
+    testImplementation "com.android.tools.lint:lint:26.2.0-rc02"
+    testImplementation "com.android.tools.lint:lint-tests:26.2.0-rc02"
+    testImplementation "com.android.tools:testutils:26.2.0-rc02"
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
+jar {
+
+    manifest {
+        attributes 'Manifest-Version': 1.0
+        attributes('Lint-Registry': 'androidx.naigation.checks.NavIssueRegistry')
+    }
+}

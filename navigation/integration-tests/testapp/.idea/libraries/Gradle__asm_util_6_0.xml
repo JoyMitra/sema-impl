@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: asm-util-6.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../prebuilts/androidx/external/org/ow2/asm/asm-util/6.0/asm-util-6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../../prebuilts/androidx/external/org/ow2/asm/asm-util/6.0/asm-util-6.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

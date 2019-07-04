@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: javax.activation-1.2.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/com/sun/activation/javax.activation/1.2.0/javax.activation-1.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/com/sun/activation/javax.activation/1.2.0/javax.activation-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

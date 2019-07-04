@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: test-screenshot-proto.test-screenshot-proto">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../out/dist/test-screenshot-proto.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

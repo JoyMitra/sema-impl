@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.room:room-common:2.1.0@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/internal/androidx/room/room-common/2.1.0/room-common-2.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/internal/androidx/room/room-common/2.1.0/room-common-2.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

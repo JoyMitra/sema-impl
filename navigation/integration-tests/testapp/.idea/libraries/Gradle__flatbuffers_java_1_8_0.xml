@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: flatbuffers-java-1.8.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../prebuilts/androidx/external/com/google/flatbuffers/flatbuffers-java/1.8.0/flatbuffers-java-1.8.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../../prebuilts/androidx/external/com/google/flatbuffers/flatbuffers-java/1.8.0/flatbuffers-java-1.8.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

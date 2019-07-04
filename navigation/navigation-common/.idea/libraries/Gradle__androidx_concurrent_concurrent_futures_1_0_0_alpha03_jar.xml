@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.concurrent:concurrent-futures:1.0.0-alpha03@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/internal/androidx/concurrent/concurrent-futures/1.0.0-alpha03/concurrent-futures-1.0.0-alpha03.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/internal/androidx/concurrent/concurrent-futures/1.0.0-alpha03/concurrent-futures-1.0.0-alpha03-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

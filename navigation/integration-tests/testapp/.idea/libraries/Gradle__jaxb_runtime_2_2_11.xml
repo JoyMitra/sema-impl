@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: jaxb-runtime-2.2.11">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../prebuilts/androidx/external/org/glassfish/jaxb/jaxb-runtime/2.2.11/jaxb-runtime-2.2.11.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../../prebuilts/androidx/external/org/glassfish/jaxb/jaxb-runtime/2.2.11/jaxb-runtime-2.2.11-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

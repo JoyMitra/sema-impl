@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: android.arch.core:common:1.1.0@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/internal/android/arch/core/common/1.1.0/common-1.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: jetifier-core.jetifier-core-1.0.0-beta05-sources">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../out/androidx/jetifier-core/build/libs/jetifier-core-1.0.0-beta05-sources.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

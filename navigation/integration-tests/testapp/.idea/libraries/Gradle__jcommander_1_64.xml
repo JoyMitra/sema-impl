@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: jcommander-1.64">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../prebuilts/androidx/external/com/beust/jcommander/1.64/jcommander-1.64.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

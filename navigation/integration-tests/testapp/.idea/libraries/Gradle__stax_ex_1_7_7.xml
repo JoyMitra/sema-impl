@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: stax-ex-1.7.7">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../prebuilts/androidx/external/org/jvnet/staxex/stax-ex/1.7.7/stax-ex-1.7.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../../prebuilts/androidx/external/org/jvnet/staxex/stax-ex/1.7.7/stax-ex-1.7.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: kotlinpoet-1.1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/com/squareup/kotlinpoet/1.1.0/kotlinpoet-1.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

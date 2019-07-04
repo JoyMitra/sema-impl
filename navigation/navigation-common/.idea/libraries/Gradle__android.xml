@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: android">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/fullsdk-darwin/platforms/android-29/android.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

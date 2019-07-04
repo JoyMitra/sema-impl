@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: sqlite-jdbc-3.25.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/org/xerial/sqlite-jdbc/3.25.2/sqlite-jdbc-3.25.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

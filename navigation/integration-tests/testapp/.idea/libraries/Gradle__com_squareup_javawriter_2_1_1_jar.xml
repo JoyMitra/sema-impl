@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.squareup:javawriter:2.1.1@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../prebuilts/androidx/external/com/squareup/javawriter/2.1.1/javawriter-2.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../../prebuilts/androidx/external/com/squareup/javawriter/2.1.1/javawriter-2.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

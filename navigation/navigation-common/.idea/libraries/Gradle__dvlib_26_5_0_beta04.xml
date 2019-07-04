@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: dvlib-26.5.0-beta04">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/com/android/tools/dvlib/26.5.0-beta04/dvlib-26.5.0-beta04.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: commons-logging-1.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/commons-logging/commons-logging/1.2/commons-logging-1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/commons-logging/commons-logging/1.2/commons-logging-1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

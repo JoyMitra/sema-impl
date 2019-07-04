@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: compile-testing-0.11">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/com/google/testing/compile/compile-testing/0.11/compile-testing-0.11.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/com/google/testing/compile/compile-testing/0.11/compile-testing-0.11-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

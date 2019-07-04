@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: core-common.core-common-2.1.0-rc01">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../out/androidx/arch/core-common/build/libs/core-common-2.1.0-rc01.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

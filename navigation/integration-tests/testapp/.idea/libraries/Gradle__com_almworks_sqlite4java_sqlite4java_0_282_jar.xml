@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: com.almworks.sqlite4java:sqlite4java:0.282@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../prebuilts/androidx/external/com/almworks/sqlite4java/sqlite4java/0.282/sqlite4java-0.282.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

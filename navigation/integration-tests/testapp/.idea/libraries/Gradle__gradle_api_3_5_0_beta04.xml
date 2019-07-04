@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: gradle-api-3.5.0-beta04">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../prebuilts/androidx/external/com/android/tools/build/gradle-api/3.5.0-beta04/gradle-api-3.5.0-beta04.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

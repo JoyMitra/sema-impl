@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: checker-qual-2.5.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../prebuilts/androidx/external/org/checkerframework/checker-qual/2.5.2/checker-qual-2.5.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

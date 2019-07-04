@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: tracker-26.4.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/com/android/tools/analytics-library/tracker/26.4.0/tracker-26.4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

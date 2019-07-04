@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ddmlib-26.5.0-beta04">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../prebuilts/androidx/external/com/android/tools/ddms/ddmlib/26.5.0-beta04/ddmlib-26.5.0-beta04.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

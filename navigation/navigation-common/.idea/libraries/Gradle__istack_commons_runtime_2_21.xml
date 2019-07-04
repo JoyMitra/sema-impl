@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: istack-commons-runtime-2.21">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/com/sun/istack/istack-commons-runtime/2.21/istack-commons-runtime-2.21.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/com/sun/istack/istack-commons-runtime/2.21/istack-commons-runtime-2.21-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

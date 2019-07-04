@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: __local_aars__:/Users/Joy/androidx-master-dev/frameworks/support/media2/media2-exoplayer/src/main/libs/exoplayer-media2.jar:unspecified@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../media2/media2-exoplayer/src/main/libs/exoplayer-media2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

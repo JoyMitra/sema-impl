@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: jdom2-2.0.6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/org/jdom/jdom2/2.0.6/jdom2-2.0.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/org/jdom/jdom2/2.0.6/jdom2-2.0.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

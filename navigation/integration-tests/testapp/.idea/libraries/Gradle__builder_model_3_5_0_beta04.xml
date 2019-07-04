@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: builder-model-3.5.0-beta04">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../prebuilts/androidx/external/com/android/tools/build/builder-model/3.5.0-beta04/builder-model-3.5.0-beta04.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

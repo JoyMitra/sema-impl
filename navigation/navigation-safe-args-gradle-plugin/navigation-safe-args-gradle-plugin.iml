@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":navigation:navigation-safe-args-gradle-plugin" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/../navigation-common" external.system.id="GRADLE" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="android-gradle" name="Android-Gradle">
+      <configuration>
+        <option name="GRADLE_PROJECT_PATH" value=":navigation:navigation-safe-args-gradle-plugin" />
+        <option name="LAST_SUCCESSFUL_SYNC_AGP_VERSION" />
+        <option name="LAST_KNOWN_AGP_VERSION" />
+      </configuration>
+    </facet>
+    <facet type="java-gradle" name="Java-Gradle">
+      <configuration>
+        <option name="BUILD_FOLDER_PATH" value="$MODULE_DIR$/../../../../out/androidx/navigation/navigation-safe-args-gradle-plugin/build" />
+        <option name="BUILDABLE" value="true" />
+      </configuration>
+    </facet>
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="3" platform="JVM 1.6" useProjectSettings="false">
+        <compilerSettings>
+          <option name="additionalArguments" value="-Werror" />
+        </compilerSettings>
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/../../../../out/androidx/navigation/navigation-safe-args-gradle-plugin/build/classes/kotlin/main" />
+          <option name="classpath" value="$USER_HOME$/.gradle/caches/5.4.1/generated-gradle-jars/gradle-api-5.4.1.jar:/Users/Joy/.gradle/wrapper/dists/gradle-5.4.1-bin/7nfy68ddfo912yhfsnstyakjg/gradle-5.4.1/lib/groovy-all-1.0-2.5.4.jar:/Users/Joy/.gradle/wrapper/dists/gradle-5.4.1-bin/7nfy68ddfo912yhfsnstyakjg/gradle-5.4.1/lib/gradle-installation-beacon-5.4.1.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/build/gradle/3.4.0/gradle-3.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/jetbrains/kotlin/kotlin-gradle-plugin/1.3.20/kotlin-gradle-plugin-1.3.20.jar:/Users/Joy/androidx-master-dev/out/androidx/navigation/navigation-safe-args-generator/build/libs/navigation-safe-args-generator-2.1.0-alpha06.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/build/builder/3.4.0/builder-3.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/analytics-library/tracker/26.4.0/tracker-26.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/analytics-library/shared/26.4.0/shared-26.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/androidx/databinding/databinding-compiler-common/3.4.0/databinding-compiler-common-3.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/build/jetifier/jetifier-processor/1.0.0-beta04/jetifier-processor-1.0.0-beta04.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/build/jetifier/jetifier-core/1.0.0-beta04/jetifier-core-1.0.0-beta04.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/google/protobuf/protobuf-java-util/3.4.0/protobuf-java-util-3.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/lint/lint-gradle-api/26.4.0/lint-gradle-api-26.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/build/manifest-merger/26.4.0/manifest-merger-26.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/sdk-common/26.4.0/sdk-common-26.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/sdklib/26.4.0/sdklib-26.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/analytics-library/crash/26.4.0/crash-26.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/build/gradle-api/3.4.0/gradle-api-3.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/repository/26.4.0/repository-26.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.3.21/kotlin-stdlib-jdk8-1.3.21.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/build/transform-api/2.0.0-deprecated-use-gradle-api/transform-api-2.0.0-deprecated-use-gradle-api.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/ow2/asm/asm-analysis/6.0/asm-analysis-6.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/ow2/asm/asm-commons/6.0/asm-commons-6.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/ow2/asm/asm-util/6.0/asm-util-6.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/ow2/asm/asm-tree/6.0/asm-tree-6.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/ow2/asm/asm/6.0/asm-6.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/net/sf/jopt-simple/jopt-simple/4.9/jopt-simple-4.9.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/net/sf/proguard/proguard-gradle/6.0.3/proguard-gradle-6.0.3.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/build/bundletool/0.7.2/bundletool-0.7.2.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/analytics-library/protos/26.4.0/protos-26.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/google/protobuf/protobuf-java/3.4.0/protobuf-java-3.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/jetbrains/kotlin/kotlin-gradle-plugin-api/1.3.20/kotlin-gradle-plugin-api-1.3.20.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/jetbrains/kotlin/kotlin-gradle-plugin-model/1.3.20/kotlin-gradle-plugin-model-1.3.20.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/jetbrains/kotlin/kotlin-native-utils/1.3.20/kotlin-native-utils-1.3.20.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/jetbrains/kotlin/kotlin-reflect/1.3.21/kotlin-reflect-1.3.21.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.3.21/kotlin-stdlib-jdk7-1.3.21.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/jetbrains/kotlin/kotlin-stdlib/1.3.31/kotlin-stdlib-1.3.31.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/xpp3/xpp3/1.1.4c/xpp3-1.1.4c.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/squareup/javapoet/1.8.0/javapoet-1.8.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/squareup/kotlinpoet/1.1.0/kotlinpoet-1.1.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/build/builder-model/3.4.0/builder-model-3.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/build/builder-test-api/3.4.0/builder-test-api-3.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/ddms/ddmlib/26.4.0/ddmlib-26.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/layoutlib/layoutlib-api/26.4.0/layoutlib-api-26.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/dvlib/26.4.0/dvlib-26.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/common/26.4.0/common-26.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/build/apkzlib/3.4.0/apkzlib-3.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/build/apksig/3.4.0/apksig-3.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/squareup/javawriter/2.5.0/javawriter-2.5.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/bouncycastle/bcpkix-jdk15on/1.56/bcpkix-jdk15on-1.56.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/bouncycastle/bcprov-jdk15on/1.56/bcprov-jdk15on-1.56.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/it/unimi/dsi/fastutil/7.2.0/fastutil-7.2.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/googlecode/json-simple/json-simple/1.1/json-simple-1.1.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/tools/annotations/26.4.0/annotations-26.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/google/jimfs/jimfs/1.1/jimfs-1.1.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/google/guava/guava/26.0-jre/guava-26.0-jre.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/apache/httpcomponents/httpmime/4.5.6/httpmime-4.5.6.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/apache/httpcomponents/httpclient/4.5.6/httpclient-4.5.6.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/apache/httpcomponents/httpcore/4.4.10/httpcore-4.4.10.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/androidx/databinding/databinding-common/3.4.0/databinding-common-3.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/android/databinding/baseLibrary/3.4.0/baseLibrary-3.4.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/antlr/antlr4/4.5.3/antlr4-4.5.3.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/commons-io/commons-io/2.4/commons-io-2.4.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/googlecode/juniversalchardet/juniversalchardet/1.0.3/juniversalchardet-1.0.3.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/net/sf/proguard/proguard-base/6.0.3/proguard-base-6.0.3.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/jdom/jdom2/2.0.6/jdom2-2.0.6.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/jetbrains/kotlin/kotlin-stdlib-common/1.3.31/kotlin-stdlib-common-1.3.31.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/jetbrains/annotations/13.0/annotations-13.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/apache/commons/commons-compress/1.12/commons-compress-1.12.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/checkerframework/checker-qual/2.5.2/checker-qual-2.5.2.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/commons-codec/commons-codec/1.10/commons-codec-1.10.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/sun/activation/javax.activation/1.2.0/javax.activation-1.2.0.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/glassfish/jaxb/jaxb-runtime/2.2.11/jaxb-runtime-2.2.11.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/glassfish/jaxb/jaxb-core/2.2.11/jaxb-core-2.2.11.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/jvnet/staxex/stax-ex/1.7.7/stax-ex-1.7.7.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/sun/xml/fastinfoset/FastInfoset/1.2.13/FastInfoset-1.2.13.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/javax/xml/bind/jaxb-api/2.2.12-b140109.1041/jaxb-api-2.2.12-b140109.1041.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/org/glassfish/jaxb/txw2/2.2.11/txw2-2.2.11.jar:/Users/Joy/androidx-master-dev/prebuilts/androidx/external/com/sun/istack/istack-commons-runtime/2.21/istack-commons-runtime-2.21.jar" />
+          <option name="noStdlib" value="true" />
+          <option name="noReflect" value="true" />
+          <option name="moduleName" value="navigation-safe-args-gradle-plugin" />
+          <option name="addCompilerBuiltIns" value="true" />
+          <option name="loadBuiltInsFromDependencies" value="true" />
+          <option name="languageVersion" value="1.3" />
+          <option name="apiVersion" value="1.3" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+          <option name="pluginClasspaths">
+            <array />
+          </option>
+          <option name="errors">
+            <ArgumentParseErrors />
+          </option>
+        </compilerArguments>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/../../../../out/androidx/navigation/navigation-safe-args-gradle-plugin/build/classes/java/main" />
+    <output-test url="file://$MODULE_DIR$/../../../../out/androidx/navigation/navigation-safe-args-gradle-plugin/build/classes/java/test" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/kotlin" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/kotlin" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/tests/kotlin" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/.gradle" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../../../out/androidx/navigation/navigation-safe-args-gradle-plugin/build/generated/resources">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../out/androidx/navigation/navigation-safe-args-gradle-plugin/build/generated/resources" type="java-test-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="navigation-safe-args-generator" exported="" />
+    <orderEntry type="library" exported="" name="Gradle: gradle-3.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: kotlin-gradle-plugin-1.3.20" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: builder-3.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: tracker-26.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: shared-26.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: databinding-compiler-common-3.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: jetifier-processor-1.0.0-beta04" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: jetifier-core-1.0.0-beta04" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: protobuf-java-util-3.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: lint-gradle-api-26.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: manifest-merger-26.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: sdk-common-26.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: sdklib-26.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: gson-2.8.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: crash-26.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: gradle-api-3.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: repository-26.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: kotlin-stdlib-jdk8-1.3.21" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: transform-api-2.0.0-deprecated-use-gradle-api" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: asm-analysis-6.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: asm-commons-6.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: asm-util-6.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: asm-tree-6.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: asm-6.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: jopt-simple-4.9" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: proguard-gradle-6.0.3" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: bundletool-0.7.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: protos-26.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: protobuf-java-3.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: kotlin-gradle-plugin-api-1.3.20" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: kotlin-gradle-plugin-model-1.3.20" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: kotlin-native-utils-1.3.20" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: kotlin-reflect-1.3.21" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: kotlin-stdlib-jdk7-1.3.21" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: kotlin-stdlib-1.3.31" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: xpp3-1.1.4c" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: xmlpull-1.1.3.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: javapoet-1.8.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: kotlinpoet-1.1.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: builder-model-3.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: builder-test-api-3.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: ddmlib-26.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: layoutlib-api-26.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: dvlib-26.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: common-26.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: apkzlib-3.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: apksig-3.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: javawriter-2.5.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: bcpkix-jdk15on-1.56" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: bcprov-jdk15on-1.56" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: javax.inject-1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: fastutil-7.2.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: json-simple-1.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: annotations-26.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: jimfs-1.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: guava-26.0-jre" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: httpmime-4.5.6" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: httpclient-4.5.6" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: httpcore-4.4.10" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: databinding-common-3.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: baseLibrary-3.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: antlr4-4.5.3" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: commons-io-2.4" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: juniversalchardet-1.0.3" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: proguard-base-6.0.3" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: jdom2-2.0.6" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: kotlin-stdlib-common-1.3.31" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: annotations-13.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: commons-compress-1.12" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: kxml2-2.3.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: jsr305-3.0.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: checker-qual-2.5.2" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Gradle: error_prone_annotations-2.1.3" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: j2objc-annotations-1.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: animal-sniffer-annotations-1.14" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: commons-logging-1.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: commons-codec-1.10" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: javax.activation-1.2.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: jaxb-runtime-2.2.11" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: jaxb-core-2.2.11" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: stax-ex-1.7.7" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: FastInfoset-1.2.13" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: jaxb-api-2.2.12-b140109.1041" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: txw2-2.2.11" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: istack-commons-runtime-2.21" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: gradle-api-5.4.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: groovy-all-1.0-2.5.4" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: gradle-installation-beacon-5.4.1" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: aapt2-proto-0.3.1" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: kotlin-annotation-processing-gradle-1.3.20" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: kotlin-android-extensions-1.3.20" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: kotlin-compiler-embeddable-1.3.20" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: kotlin-compiler-runner-1.3.20" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: kotlin-scripting-compiler-embeddable-1.3.20" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: auto-value-1.5.2" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: error_prone_annotations-2.2.0" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: kotlin-script-runtime-1.3.20" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: trove4j-1.0.20181211" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: kotlin-build-common-1.3.20" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: kotlin-daemon-client-1.3.20" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: junit-4.12" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: hamcrest-core-1.3" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: aapt2-proto-0.3.1" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: kotlin-annotation-processing-gradle-1.3.20" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: kotlin-android-extensions-1.3.20" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: kotlin-compiler-embeddable-1.3.20" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: kotlin-compiler-runner-1.3.20" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: kotlin-scripting-compiler-embeddable-1.3.20" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: auto-value-1.5.2" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: error_prone_annotations-2.2.0" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: kotlin-script-runtime-1.3.20" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: trove4j-1.0.20181211" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: kotlin-build-common-1.3.20" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: kotlin-daemon-client-1.3.20" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: gradle-test-kit-5.4.1" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: _Users_Joy_androidx_master_dev_out_androidx_navigation_navigation_safe_args_gradle_plugin_build_pluginUnderTestMetadata" level="project" />
+  </component>
+</module>

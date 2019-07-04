@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: collection-ktx.collection-ktx-1.2.0-alpha01">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../out/androidx/collection/collection-ktx/build/libs/collection-ktx-1.2.0-alpha01.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

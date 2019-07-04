@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: room-runtime-2.2.0-alpha01">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../out/androidx/room/room-runtime/build/libJar/room-runtime-2.2.0-alpha01.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: dnsns">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.sdkman/candidates/java/8u152-zulu/jre/lib/ext/dnsns.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

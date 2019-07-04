@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: guava-26.0-jre">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../prebuilts/androidx/external/com/google/guava/guava/26.0-jre/guava-26.0-jre.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

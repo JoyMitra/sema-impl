@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: baseLibrary-3.4.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/com/android/databinding/baseLibrary/3.4.0/baseLibrary-3.4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

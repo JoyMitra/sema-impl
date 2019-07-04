@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: bundletool-0.7.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../prebuilts/androidx/external/com/android/tools/build/bundletool/0.7.2/bundletool-0.7.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: room-incremental-annotation-processing.room-incremental-annotation-processing-sources">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../out/androidx/room/integration-tests/room-incremental-annotation-processing/build/libs/room-incremental-annotation-processing-sources.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

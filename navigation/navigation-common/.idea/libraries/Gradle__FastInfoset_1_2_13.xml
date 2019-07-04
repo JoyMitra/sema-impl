@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: FastInfoset-1.2.13">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/com/sun/xml/fastinfoset/FastInfoset/1.2.13/FastInfoset-1.2.13.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../prebuilts/androidx/external/com/sun/xml/fastinfoset/FastInfoset/1.2.13/FastInfoset-1.2.13-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

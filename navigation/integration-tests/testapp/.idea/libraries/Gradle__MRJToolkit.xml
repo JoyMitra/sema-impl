@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: MRJToolkit">
+    <CLASSES>
+      <root url="jar:///System/Library/Java/Extensions/MRJToolkit.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

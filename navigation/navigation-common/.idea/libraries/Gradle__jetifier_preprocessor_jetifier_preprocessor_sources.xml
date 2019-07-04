@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: jetifier-preprocessor.jetifier-preprocessor-sources">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../out/androidx/jetifier-preprocessor/build/libs/jetifier-preprocessor-sources.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

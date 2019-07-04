@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: cldrdata">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.sdkman/candidates/java/8u152-zulu/jre/lib/ext/cldrdata.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
