@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ridedtls_nav"
+    app:startDestination="@id/rideStatus">
+
+    <fragment android:id="@+id/rideStatus"
+        tools:layout="@layout/ride_status">
+        <widget app:wid="@id/expectedArrival" app:value="fun/getExpectedArrival">
+            <fun android:name="getExpectedArrival" app:resource="INTERNET">
+                <parm app:arg="var/dtls"/>
+            </fun>
+        </widget>
+        <action
+            android:id="@+id/rideStatus_frag1"
+            app:destination="@id/frag1">
+            <constraint>
+                <fun android:name="demo" app:resource="INTERNET">
+                    <parm app:arg="var/dtls"/>
+                </fun>
+            </constraint>
+            <argument android:name="x" android:defaultValue="fun/getX">
+                <fun android:name="getX" app:resource="INTERNET">
+                    <parm app:arg="var/dtls"/>
+                </fun>
+            </argument>
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/frag1">
+        <action
+            android:id="@+id/act1"
+            app:destination="@id/frag2">
+            <argument android:name="p" android:defaultValue="1"/>
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/frag2"/>
+
+</navigation>

@@ -1,0 +1,17 @@
+include ':app'
+
+def includeProject(name, filePath) {
+    settings.include(name)
+
+    def file
+    if(filePath instanceof String) {
+        file = new File(filePath)
+    }
+    else {
+        file = filePath
+    }
+    project(name).projectDir = file
+}
+
+includeProject(":nav-checks","/Users/Joy/androidx-master-dev/frameworks/support/navigation-checks/")
+//includeProject(":nav-checks","/Users/Joy/TestLint/checks/")

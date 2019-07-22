@@ -1,0 +1,39 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="AESCBCEncryption" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="AESECBEncryption" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="AESEncryptionAlt" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="AllowAllHostnameVerifier" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="AndroidAllowBackupVulnerability" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="AndroidDebuggableEnabled" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="AndroidElementNotAllowed" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="AndroidNoAllowBackupAttribute" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="BlowfishWeakKeyPairGenerator" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="BroadcastSensitiveInformation" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="CannonicalizeUrl" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="CheckClientTrustedEmptyImplementation" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="CheckServerTrustedEmptyImplementation" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="DESEncryption" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="DebugLogging" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="DebugLoggingFunction" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="ErrorLogging" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="ErrorLoggingFunction" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="ExternalStorage" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="ExternalStoragePermission" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="GeoLocationAPIVulnerability" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="HardcodedAESKey" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="InsecureFileAccessMode" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="NullCipher" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PRNG" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PossibleTapJackingAttack" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="RSANoPadding" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="RSAWeakKeyPairGenerator" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="UnencryptedSocket" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="UnprotectedActivity" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="UnprotectedServices" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="VerboseLogging" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="VerboseLoggingFunction" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="WebviewWithJavascript" enabled="false" level="WARNING" enabled_by_default="false" />
+  </profile>
+</component>

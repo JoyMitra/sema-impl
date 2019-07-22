@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_id"
+    app:startDestination="@+id/home">
+
+    <fragment android:id="@+id/home"
+        tools:layout="@layout/home_fragment">
+        <action android:id="@+id/home_req_ride"
+            app:destination="@id/req_ride"
+            app:widgetOn="@id/findRide"
+            app:gesture="click">
+            <argument android:name="c" android:defaultValue="3"/>
+        </action>
+        <action android:id="@+id/home_payDtls"
+            app:destination="@id/payDtls"
+            app:widgetOn="@id/addCard"/>
+    </fragment>
+
+    <fragment android:id="@+id/payDtls"
+        tools:layout="@layout/payment_dtls">
+
+        <widget app:wid="@id/card"/>
+        <widget app:wid="@id/email"/>
+
+        <action android:id="@+id/payDtls_home"
+            app:gesture="click"
+            app:widgetOn="@id/save"
+            app:destination="@id/home">
+            <constraint>
+                <fun android:name="saveCard" app:resource="INT_STORE">
+                    <parm app:arg="var/card"/>
+                    <parm app:arg="var/email"/>
+                </fun>
+            </constraint>
+        </action>
+    </fragment>
+
+    <fragment android:id="@+id/req_ride"
+        tools:layout="@layout/req_ride_fragment">
+        <!--<deepLink app:uri="sema://mock.uber.app/{args}"/>-->
+        <widget app:wid="@id/source" app:value="fun/getCurLoc">
+            <fun android:name="getCurLoc" app:resource="LOCATION"/>
+        </widget>
+        <widget app:wid="@id/dest" />
+        <action
+            android:id="@+id/req_ride_ride"
+            app:destination="@id/nav_ride"
+            app:widgetOn="@id/bookRide"
+            app:gesture="click">
+            <argument android:name="s" android:defaultValue="var/c" app:argType="reference"/>
+            <argument android:name="d" android:defaultValue="@id/dest"/>
+        </action>
+    </fragment>
+
+    <navigation android:id="@+id/nav_ride" app:startDestination="@id/ride">
+        <fragment android:id="@+id/ride"
+            tools:layout="@layout/ride_fragment">
+            <widget app:wid="@id/ridedtls" app:value="fun/getDtls">
+                <fun android:name="getDtls" app:resource="INTERNET">
+                    <parm app:arg="var/s"/>
+                    <parm app:arg="var/d"/>
+                </fun>
+            </widget>
+            <action android:id="@+id/ride_ride_status"
+                app:destination="@id/ridedtlsActivity"
+                app:widgetOn="@id/confirm"
+                app:gesture="click">
+                <constraint>
+                    <fun android:name="postPayment" app:resource="INTERNET">
+                        <parm app:arg="PayGateWayURL" />
+                        <parm app:arg="fun/getPayInfo">
+                            <fun android:name="getPayInfo" resource="INT_STORE" />
+                        </parm>
+                    </fun>
+                </constraint>
+                <argument android:name="dtls" android:defaultValue="@id/ridedtls"/>
+            </action>
+
+            <action android:id="@+id/ride_payFail"
+                app:destination="@id/payFail"
+                app:widgetOn="@id/confirm"
+                app:gesture="click">
+                <constraint>
+                    <not>
+                        <fun android:name="postPayment" app:resource="INTERNET">
+                            <parm app:arg="PayGateWayURL"/>
+                            <parm app:arg="fun/getPayInfo">
+                                <fun android:name="getPayInfo" resource="INT_STORE" />
+                            </parm>
+                        </fun>
+                    </not>
+                </constraint>
+            </action>
+
+            <action android:id="@+id/ride_req_ride"
+                app:destination="@id/req_ride"
+                app:widgetOn="@id/cancel"
+                app:gesture="click">
+            </action>
+        </fragment>
+    </navigation>
+
+    <activity
+        android:id="@+id/ridedtlsActivity"
+        android:name="sema.apps.mockuber.RideDtlsActivity"
+        tools:layout="@layout/activity_ridedtls"/>
+
+    <fragment android:id="@+id/payFail"
+        tools:layout="@layout/ride_fragment">
+    </fragment>
+
+</navigation>
