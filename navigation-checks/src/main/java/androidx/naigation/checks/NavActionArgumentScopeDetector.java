@@ -27,24 +27,23 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class NavActionConstraintsScopeDetector extends ResourceXmlDetector {
+public class NavActionArgumentScopeDetector extends ResourceXmlDetector {
 
-    private Map<String,String> syn_map = null;
+    private Map<String, String> syn_map = null;
     private Map<String, List<String>> scope = null;
     private Map<String, String> graph_startDest_map = null;
     private Map<String, String> graph_layout_map = null;
     private Map<String, String> activity_layout_map = null;
-    private List<NavConstraintsDao> constraintsToCheck = null;
+    private List<NavConstraintsDao> argumentsToCheck = null;
 
-    public static final Issue ACTION_CONSTRAINT_NOT_IN_SCOPE = Issue.create("ActionConstraintNotInScope",
-            "Variable used in action constraint is not in scope",
-            "Variable used in constraint of an action " +
-                    "must be a widget in the source screen or must be" +
-                    "an incoming variable as part of aall transitions into the source screen",
+    public static final Issue ACTION_ARGUMENT_VALUE_NOT_IN_SCOPE = Issue.create("ArgValueScope",
+            "Argument value not in scope",
+            "If the default value of an argument in an action is a variable then " +
+                    "the variable should be in the scope of the screen from which the action is originating",
             Category.LINT, 10, Severity.ERROR,
-            new Implementation(NavActionConstraintsScopeDetector.class, Scope.RESOURCE_FILE_SCOPE));
+            new Implementation(NavActionArgumentScopeDetector.class, Scope.ALL_RESOURCES_SCOPE));
 
-    public NavActionConstraintsScopeDetector() {
+    public NavActionArgumentScopeDetector() {
 
     }
 
@@ -55,51 +54,12 @@ public class NavActionConstraintsScopeDetector extends ResourceXmlDetector {
 
     @Override
     public Collection<String> getApplicableElements() {
-        return Arrays.asList(SdkConstants.TAG_ACTIVITY, SdkConstants.TAG_ACTION,SdkConstants.TAG_NAVIGATION);
+        return Arrays.asList(SdkConstants.TAG_ACTIVITY, SdkConstants.TAG_NAVIGATION, Constants.TAG_ARGUMENT,SdkConstants.TAG_ACTION);
     }
 
     @Override
     public Collection<String> getApplicableAttributes() {
         return Collections.singleton(SdkConstants.ATTR_NAV_GRAPH);
-    }
-
-    @Override
-    public void afterCheckFile(Context context) {
-        if(constraintsToCheck != null && scope != null) {
-            for(NavConstraintsDao navConstraintsDao : constraintsToCheck) {
-                String srcId = navConstraintsDao.getSrcId();
-                List<String> parms = navConstraintsDao.getConstraintArgs();
-                List<String> args = scope.get(srcId);
-                if(args == null && hasNestedSynonym(srcId)) {
-                    args = scope
-                            .get(syn_map
-                                    .get(srcId));
-                }
-                else if(args == null && hasActivitySynonym(srcId)) {
-                    args = scope
-                            .get(activity_layout_map
-                                    .get(graph_layout_map
-                                            .get(graph_startDest_map
-                                                    .get(srcId))));
-                }
-                else if(args != null && hasNestedSynonym(srcId)) {
-                    args
-                            .addAll(scope
-                                    .get(syn_map.get(srcId)));
-                }
-                else if(args != null && hasActivitySynonym(srcId)) {
-                    args
-                            .addAll(scope
-                                    .get(activity_layout_map
-                                            .get(graph_layout_map
-                                                    .get(graph_startDest_map.get(srcId)))));
-                }
-                if(parms != null && args != null && !args.containsAll(parms)) {
-                    context.report(ACTION_CONSTRAINT_NOT_IN_SCOPE,navConstraintsDao.getLocation(),"Variable used in <parm> may not be in scope." +
-                            "Make sure it is a widget in parent screen or part of all incoming transitions into the parent screen.");
-                }
-            }
-        }
     }
 
     @Override
@@ -110,6 +70,37 @@ public class NavActionConstraintsScopeDetector extends ResourceXmlDetector {
             String key = graph.split("/")[1];
             if(graph_layout_map == null) graph_layout_map = new HashMap<>();
             graph_layout_map.put(key, fileNm.split(".xml")[0]);
+        }
+    }
+
+    @Override
+    public void afterCheckFile(Context context) {
+        if(argumentsToCheck != null && scope != null) {
+            for(NavConstraintsDao navConstraintsDao : argumentsToCheck) {
+                String srcId = navConstraintsDao.getSrcId();
+                List<String> parms = navConstraintsDao.getConstraintArgs();
+                List<String> args = scope.get(srcId);
+                if(hasNestedSynonym(srcId)) {
+                    if(args == null) args = scope.get(syn_map.get(srcId));
+                    else args.addAll(scope.get(syn_map.get(srcId)));
+                }
+                if(hasActivitySynonym(srcId)) {
+                    if(args == null)
+                        args = scope.get(activity_layout_map
+                                .get(graph_layout_map
+                                    .get(graph_startDest_map
+                                            .get(srcId))));
+                    else
+                        args.addAll(scope.get(activity_layout_map
+                                .get(graph_layout_map
+                                        .get(graph_startDest_map
+                                                .get(srcId)))));
+                }
+                if(parms != null && !args.containsAll(parms)) {
+                    context.report(ACTION_ARGUMENT_VALUE_NOT_IN_SCOPE,navConstraintsDao.getLocation(),"defaultValue <argument> may not be in scope." +
+                            "Make sure it is a widget in parent screen or part of an incoming transitions into the parent screen.");
+                }
+            }
         }
     }
 
@@ -154,15 +145,14 @@ public class NavActionConstraintsScopeDetector extends ResourceXmlDetector {
                 updateScope(parentId,widgetIds);
             }
 
-            NodeList parmArgs = element.getElementsByTagName(Constants.TAG_PARM);
-            List<String> parmArgVals = UsefulMethods.getTagValues(parmArgs,Constants.NAV_ATTR_PARM_ARG,null);
-            if(parmArgVals != null) {
-                NavConstraintsDao navConstraintsDao = new NavConstraintsDao(parentId,parmArgVals,context.getLocation(element));
-                if(constraintsToCheck == null) constraintsToCheck = new ArrayList<>();
-                constraintsToCheck.add(navConstraintsDao);
+            NodeList actionArgumentTags = element.getElementsByTagName(Constants.TAG_ARGUMENT);
+            List<String> argumentValues = UsefulMethods.getTagValues(actionArgumentTags,Constants.NAV_ATTR_VAL_ARG,null);
+            if(!argumentValues.isEmpty()) {
+                NavConstraintsDao navConstraintsDao = new NavConstraintsDao(parentId,argumentValues,context.getLocation(element));
+                if(argumentsToCheck == null) argumentsToCheck = new ArrayList<>();
+                argumentsToCheck.add(navConstraintsDao);
             }
 
-            NodeList actionArgumentTags = element.getElementsByTagName(Constants.TAG_ARGUMENT);
             List<String> actionArgumentNames = UsefulMethods.getTagValues(actionArgumentTags,Constants.NAV_ATTR_NAME,null);
             if(actionArgumentNames != null && element.getAttribute(Constants.NAV_ACTION_DEST).contains("/")) {
                 updateScope(element.getAttribute(Constants.NAV_ACTION_DEST).split("/")[1],actionArgumentNames);
@@ -193,5 +183,4 @@ public class NavActionConstraintsScopeDetector extends ResourceXmlDetector {
                 graph_layout_map.get(graph_startDest_map.get(srcId)) != null &&
                 activity_layout_map.get(graph_layout_map.get(graph_startDest_map.get(srcId))) != null);
     }
-
 }

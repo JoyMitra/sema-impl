@@ -1,6 +1,7 @@
 package androidx.naigation.checks;
 
 import androidx.naigation.checks.dao.NavWidgetDao;
+import androidx.naigation.checks.util.Constants;
 
 import com.android.SdkConstants;
 import com.android.resources.ResourceFolderType;
@@ -12,16 +13,12 @@ import com.android.tools.lint.detector.api.ResourceXmlDetector;
 import com.android.tools.lint.detector.api.Scope;
 import com.android.tools.lint.detector.api.Severity;
 import com.android.tools.lint.detector.api.XmlContext;
-import com.sun.org.apache.xerces.internal.xni.parser.XMLComponent;
 
-import org.w3c.dom.Attr;
-import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -34,7 +31,7 @@ public class NavWidgetReferenceDetector extends ResourceXmlDetector {
     public static final Issue INVALID_NAV_WIDGET_REF = Issue.create("InvalidNavWidgetRef"
             ,"Checks if the action is performed on a valid widget"
             ,"Validates if the value in the widgetOn attribute of action in a navigation graph corresponds to a widget in the source layout from which the action originates"
-            , Category.CORRECTNESS,10, Severity.ERROR
+            , Category.LINT,10, Severity.ERROR
             ,new Implementation(NavWidgetReferenceDetector.class, Scope.ALL_RESOURCES_SCOPE));
 
 
@@ -49,7 +46,7 @@ public class NavWidgetReferenceDetector extends ResourceXmlDetector {
 
     @Override
     public Collection<String> getApplicableElements(){
-        return Arrays.asList(SdkConstants.TAG_ACTION,Constants.TAG_WIDGET,Constants.TAG_BUTTON,
+        return Arrays.asList(SdkConstants.TAG_ACTION, Constants.TAG_WIDGET,Constants.TAG_BUTTON,
                 Constants.TAG_TEXTVIEW,Constants.TAG_EDITTEXT,Constants.TAG_IMAGEVIW,
                 Constants.TAG_LISTVIEW,Constants.TAG_WEBVIEW);
     }

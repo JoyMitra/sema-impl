@@ -16,8 +16,12 @@ public class NavIssueRegistry extends IssueRegistry {
         issues.add(WidgetIdDetector.INVALID_WIDGET_ID);
         issues.add(NavWidgetReferenceDetector.INVALID_NAV_WIDGET_REF);
         issues.add(NavWidgetInitDetector.INVALID_WIDGET_INITIALIZATION);
-        issues.add(NavParmDetector.PARM_INVALID_FUN_REF);
+        issues.add(UndefinedFunRefDetector.UNDEFINED_FUN_REF);
         issues.add(NavActionConstraintsScopeDetector.ACTION_CONSTRAINT_NOT_IN_SCOPE);
+        issues.add(NavActionArgumentScopeDetector.ACTION_ARGUMENT_VALUE_NOT_IN_SCOPE);
+        issues.add(NavScreenArgumentScopeDetector.SCREEN_ARGUMENT_VALUE_NOT_IN_SCOPE);
+        issues.add(NavDuplicateVariableDetector.NAV_DUPLICATE_VAR);
+        issues.add(NavDataInjectionDetector.DATA_INJECTION_SCREEN);
         sIssues = Collections.unmodifiableList(issues);
     }
 

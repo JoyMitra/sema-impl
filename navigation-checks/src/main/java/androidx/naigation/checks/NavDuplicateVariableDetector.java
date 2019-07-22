@@ -10,6 +10,7 @@ import com.android.tools.lint.detector.api.Category;
 import com.android.tools.lint.detector.api.Context;
 import com.android.tools.lint.detector.api.Implementation;
 import com.android.tools.lint.detector.api.Issue;
+import com.android.tools.lint.detector.api.Location;
 import com.android.tools.lint.detector.api.ResourceXmlDetector;
 import com.android.tools.lint.detector.api.Scope;
 import com.android.tools.lint.detector.api.Severity;
@@ -24,27 +25,27 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
-public class NavActionConstraintsScopeDetector extends ResourceXmlDetector {
+public class NavDuplicateVariableDetector extends ResourceXmlDetector {
 
     private Map<String,String> syn_map = null;
     private Map<String, List<String>> scope = null;
     private Map<String, String> graph_startDest_map = null;
     private Map<String, String> graph_layout_map = null;
     private Map<String, String> activity_layout_map = null;
-    private List<NavConstraintsDao> constraintsToCheck = null;
+    private List<NavConstraintsDao> screenIds = null;
 
-    public static final Issue ACTION_CONSTRAINT_NOT_IN_SCOPE = Issue.create("ActionConstraintNotInScope",
-            "Variable used in action constraint is not in scope",
-            "Variable used in constraint of an action " +
-                    "must be a widget in the source screen or must be" +
-                    "an incoming variable as part of aall transitions into the source screen",
+    public static final Issue NAV_DUPLICATE_VAR = Issue.create("NavDuplicateVariable",
+            "Duplicate variables are not allowed",
+            "A variable propagating into a screen as an argument cannot be used as an argument to another screen",
             Category.LINT, 10, Severity.ERROR,
-            new Implementation(NavActionConstraintsScopeDetector.class, Scope.RESOURCE_FILE_SCOPE));
+            new Implementation(NavDuplicateVariableDetector.class, Scope.RESOURCE_FILE_SCOPE));
 
-    public NavActionConstraintsScopeDetector() {
+    public NavDuplicateVariableDetector() {
 
     }
 
@@ -55,7 +56,7 @@ public class NavActionConstraintsScopeDetector extends ResourceXmlDetector {
 
     @Override
     public Collection<String> getApplicableElements() {
-        return Arrays.asList(SdkConstants.TAG_ACTIVITY, SdkConstants.TAG_ACTION,SdkConstants.TAG_NAVIGATION);
+        return Arrays.asList(SdkConstants.TAG_ACTIVITY, SdkConstants.TAG_NAVIGATION, SdkConstants.TAG_ACTION,Constants.TAG_FRAGMENT);
     }
 
     @Override
@@ -65,38 +66,51 @@ public class NavActionConstraintsScopeDetector extends ResourceXmlDetector {
 
     @Override
     public void afterCheckFile(Context context) {
-        if(constraintsToCheck != null && scope != null) {
-            for(NavConstraintsDao navConstraintsDao : constraintsToCheck) {
-                String srcId = navConstraintsDao.getSrcId();
-                List<String> parms = navConstraintsDao.getConstraintArgs();
-                List<String> args = scope.get(srcId);
-                if(args == null && hasNestedSynonym(srcId)) {
-                    args = scope
-                            .get(syn_map
-                                    .get(srcId));
+        if(screenIds != null && scope != null) {
+            for(NavConstraintsDao navConstraintsDao1 : screenIds) {
+                String screenId1 = navConstraintsDao1.getSrcId();
+                List<String> inVars1 = scope.get(screenId1);
+                if(hasNestedSynonym(screenId1)) {
+                    if(inVars1 == null) inVars1 = scope.get(syn_map.get(screenId1));
+                    else inVars1.addAll(scope.get(syn_map.get(screenId1)));
                 }
-                else if(args == null && hasActivitySynonym(srcId)) {
-                    args = scope
-                            .get(activity_layout_map
-                                    .get(graph_layout_map
-                                            .get(graph_startDest_map
-                                                    .get(srcId))));
+                if(hasActivitySynonym(screenId1)) {
+                    if(inVars1 == null)
+                        inVars1 = scope.get(activity_layout_map
+                                .get(graph_layout_map
+                                        .get(graph_startDest_map
+                                                .get(screenId1))));
+                    else
+                        inVars1.addAll(scope.get(activity_layout_map
+                                .get(graph_layout_map
+                                        .get(graph_startDest_map
+                                                .get(screenId1)))));
                 }
-                else if(args != null && hasNestedSynonym(srcId)) {
-                    args
-                            .addAll(scope
-                                    .get(syn_map.get(srcId)));
-                }
-                else if(args != null && hasActivitySynonym(srcId)) {
-                    args
-                            .addAll(scope
-                                    .get(activity_layout_map
-                                            .get(graph_layout_map
-                                                    .get(graph_startDest_map.get(srcId)))));
-                }
-                if(parms != null && args != null && !args.containsAll(parms)) {
-                    context.report(ACTION_CONSTRAINT_NOT_IN_SCOPE,navConstraintsDao.getLocation(),"Variable used in <parm> may not be in scope." +
-                            "Make sure it is a widget in parent screen or part of all incoming transitions into the parent screen.");
+                for (NavConstraintsDao navConstraintsDao2 : screenIds) {
+                    String screenId2 = navConstraintsDao2.getSrcId();
+                    if(!screenId1.equals(screenId2)) {
+                        List<String> inVars2 = scope.get(screenId2);
+                        if(hasNestedSynonym(screenId2)) {
+                            if (inVars2 == null) inVars2 = scope.get(syn_map.get(screenId2));
+                            else inVars2.addAll(scope.get(syn_map.get(screenId2)));
+                        }
+                        if(hasActivitySynonym(screenId2)) {
+                            if(inVars2 == null)
+                                inVars2 = scope.get(activity_layout_map
+                                        .get(graph_layout_map
+                                                .get(graph_startDest_map
+                                                        .get(screenId2))));
+                            else
+                                inVars2.addAll(scope.get(activity_layout_map
+                                        .get(graph_layout_map
+                                                .get(graph_startDest_map
+                                                        .get(screenId2)))));
+                        }
+                        if(containsAny(inVars1,inVars2)) {
+                            context.report(NAV_DUPLICATE_VAR,navConstraintsDao1.getLocation(),
+                                    "Duplicate variables exist in : " + screenId1 + "," + screenId2);
+                        }
+                    }
                 }
             }
         }
@@ -137,36 +151,28 @@ public class NavActionConstraintsScopeDetector extends ResourceXmlDetector {
             else
                 throw new IndexOutOfBoundsException("startDestination or navigation ID is missing.");
         }
-        else if(name.equals(SdkConstants.TAG_ACTION)) {
+        else if (name.equals(SdkConstants.TAG_ACTION)) {
             Element parent = (Element) element.getParentNode();
             String parentId = parent.getAttribute(Constants.ATTR_ID).split("/")[1];
 
             NodeList parentArguments = parent.getElementsByTagName(Constants.TAG_ARGUMENT);
-            List<String> parentArgNames = UsefulMethods.getTagValues(parentArguments,Constants.NAV_ATTR_NAME,
+            List<String> parentArgNames = UsefulMethods.getTagValues(parentArguments, Constants.NAV_ATTR_NAME,
                     Collections.singletonList(SdkConstants.TAG_ACTION));
-            if(parentArgNames != null) {
-                updateScope(parentId,parentArgNames);
-            }
-
-            NodeList parentWidgets = parent.getElementsByTagName(Constants.TAG_WIDGET);
-            List<String> widgetIds = UsefulMethods.getTagValues(parentWidgets,Constants.NAV_ATTR_WID,null);
-            if(widgetIds != null) {
-                updateScope(parentId,widgetIds);
-            }
-
-            NodeList parmArgs = element.getElementsByTagName(Constants.TAG_PARM);
-            List<String> parmArgVals = UsefulMethods.getTagValues(parmArgs,Constants.NAV_ATTR_PARM_ARG,null);
-            if(parmArgVals != null) {
-                NavConstraintsDao navConstraintsDao = new NavConstraintsDao(parentId,parmArgVals,context.getLocation(element));
-                if(constraintsToCheck == null) constraintsToCheck = new ArrayList<>();
-                constraintsToCheck.add(navConstraintsDao);
+            if (parentArgNames != null) {
+                updateScope(parentId, parentArgNames);
             }
 
             NodeList actionArgumentTags = element.getElementsByTagName(Constants.TAG_ARGUMENT);
-            List<String> actionArgumentNames = UsefulMethods.getTagValues(actionArgumentTags,Constants.NAV_ATTR_NAME,null);
-            if(actionArgumentNames != null && element.getAttribute(Constants.NAV_ACTION_DEST).contains("/")) {
-                updateScope(element.getAttribute(Constants.NAV_ACTION_DEST).split("/")[1],actionArgumentNames);
+            List<String> actionArgumentNames = UsefulMethods.getTagValues(actionArgumentTags, Constants.NAV_ATTR_NAME, null);
+            if (actionArgumentNames != null && element.getAttribute(Constants.NAV_ACTION_DEST).contains("/")) {
+                updateScope(element.getAttribute(Constants.NAV_ACTION_DEST).split("/")[1], actionArgumentNames);
             }
+        }
+        else if(name.equals(Constants.TAG_FRAGMENT)){
+            String id = element.getAttribute(Constants.ATTR_ID).split("/")[1];
+            NavConstraintsDao navConstraintsDao = new NavConstraintsDao(id,"",context.getLocation(element));
+            if(screenIds == null) screenIds = new ArrayList<>();
+            screenIds.add(navConstraintsDao);
         }
     }
 
@@ -180,6 +186,14 @@ public class NavActionConstraintsScopeDetector extends ResourceXmlDetector {
         }
     }
 
+    private boolean containsAny(List<String> list1, List<String> list2) {
+        if(list1 != null && list2 != null) {
+            for(String l1 : list1) {
+                if(list2.contains(l1)) return true;
+            }
+        }
+        return false;
+    }
     private Boolean hasNestedSynonym(String srcId) {
         return(syn_map != null && syn_map.get(srcId) != null
                 && scope.get(syn_map.get(srcId)) != null);

@@ -1,6 +1,7 @@
 package androidx.naigation.checks;
 
-import com.android.SdkConstants;
+import androidx.naigation.checks.util.Constants;
+
 import com.android.resources.ResourceFolderType;
 import com.android.tools.lint.detector.api.Category;
 import com.android.tools.lint.detector.api.Implementation;
@@ -15,17 +16,16 @@ import org.w3c.dom.NodeList;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Collections;
 
-public class NavParmDetector extends ResourceXmlDetector {
+public class UndefinedFunRefDetector extends ResourceXmlDetector {
 
-    public static final Issue PARM_INVALID_FUN_REF = Issue.create("ParmInvalidFunRef",
-            "Reference to Fun in a parm should be defined within parm",
-            "Parm depends on Fun but the Fun is not defined anywhere.",
-            Category.CORRECTNESS, 10, Severity.ERROR,
-            new Implementation(NavParmDetector.class, Scope.RESOURCE_FILE_SCOPE));
+    public static final Issue UNDEFINED_FUN_REF = Issue.create("UndefinedFunRef",
+            "Reference to undefined <fun>",
+            "All references to fun should be defined in a child <fun> tag",
+            Category.LINT, 10, Severity.ERROR,
+            new Implementation(UndefinedFunRefDetector.class, Scope.RESOURCE_FILE_SCOPE));
 
-    public NavParmDetector() {}
+    public UndefinedFunRefDetector() {}
 
     @Override
     public boolean appliesTo(ResourceFolderType folderType) {
@@ -34,21 +34,27 @@ public class NavParmDetector extends ResourceXmlDetector {
 
     @Override
     public Collection<String> getApplicableElements() {
-        return Collections.singleton(Constants.TAG_PARM);
+        return Arrays.asList(Constants.TAG_PARM,Constants.TAG_ARGUMENT);
     }
 
     @Override
     public void visitElement(XmlContext context, Element element) {
-        String value = element.getAttribute(Constants.NAV_ATTR_PARM_ARG);
+        String name = element.getTagName();
+        String value = "";
+        if(name.equals(Constants.TAG_PARM))
+            value = element.getAttribute(Constants.NAV_ATTR_PARM_ARG);
+        else if(name.equals(Constants.TAG_ARGUMENT))
+            value = element.getAttribute(Constants.NAV_ATTR_VAL_ARG);
+
         if(value.startsWith(Constants.NAV_PREFIX_FUN)) {
             String funId = value.split("/")[1];
             NodeList fundefs = element.getElementsByTagName(Constants.TAG_FUN);
             if(fundefs.getLength() == 0)
-                context.report(PARM_INVALID_FUN_REF,context.getLocation(element),"Missing <fun>");
+                context.report(UNDEFINED_FUN_REF,context.getLocation(element),"Missing <fun> definition");
             else {
                 Element eFun = (Element) fundefs.item(0);
                 if(!eFun.getAttribute(Constants.NAV_ATTR_NAME).equals(funId))
-                    context.report(PARM_INVALID_FUN_REF,context.getLocation(element),funId + "does not exist");
+                    context.report(UNDEFINED_FUN_REF,context.getLocation(element),funId + "does not exist");
             }
         }
     }

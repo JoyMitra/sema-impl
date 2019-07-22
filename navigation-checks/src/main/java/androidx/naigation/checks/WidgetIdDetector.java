@@ -30,7 +30,7 @@ public class WidgetIdDetector extends ResourceXmlDetector {
     public static final Issue INVALID_WIDGET_ID = Issue.create("InvalidWidget",
             "onWidget should be an ID",
             "The value of the attribute must be an ID corresponding to the source screen",
-            Category.CORRECTNESS, 10, Severity.ERROR,
+            Category.LINT, 10, Severity.ERROR,
             new Implementation(WidgetIdDetector.class, Scope.RESOURCE_FILE_SCOPE));
 
     public WidgetIdDetector() {
